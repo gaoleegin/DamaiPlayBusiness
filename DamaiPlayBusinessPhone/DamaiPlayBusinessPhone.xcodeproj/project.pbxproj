@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		445166C61BD885E5005782D0 /* DMUserLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 445166C51BD885E5005782D0 /* DMUserLogin.storyboard */; settings = {ASSET_TAGS = (); }; };
+		445166CA1BD8B4AD005782D0 /* DMUserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445166C91BD8B4AD005782D0 /* DMUserLoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		445166CC1BD8B8AD005782D0 /* LoginViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 445166CB1BD8B8AD005782D0 /* LoginViewHeader.xib */; settings = {ASSET_TAGS = (); }; };
 		446DB36F1BD87EA900C9EF73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446DB36E1BD87EA900C9EF73 /* AppDelegate.swift */; };
-		446DB3711BD87EA900C9EF73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446DB3701BD87EA900C9EF73 /* ViewController.swift */; };
-		446DB3741BD87EA900C9EF73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446DB3721BD87EA900C9EF73 /* Main.storyboard */; };
 		446DB3761BD87EA900C9EF73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 446DB3751BD87EA900C9EF73 /* Assets.xcassets */; };
 		446DB3791BD87EA900C9EF73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446DB3771BD87EA900C9EF73 /* LaunchScreen.storyboard */; };
 		446DB3841BD87EA900C9EF73 /* DamaiPlayBusinessPhoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446DB3831BD87EA900C9EF73 /* DamaiPlayBusinessPhoneTests.swift */; };
@@ -34,10 +35,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		445166C51BD885E5005782D0 /* DMUserLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DMUserLogin.storyboard; sourceTree = "<group>"; };
+		445166C91BD8B4AD005782D0 /* DMUserLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMUserLoginViewController.swift; sourceTree = "<group>"; };
+		445166CB1BD8B8AD005782D0 /* LoginViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewHeader.xib; sourceTree = "<group>"; };
 		446DB36B1BD87EA900C9EF73 /* DamaiPlayBusinessPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DamaiPlayBusinessPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		446DB36E1BD87EA900C9EF73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		446DB3701BD87EA900C9EF73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		446DB3731BD87EA900C9EF73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		446DB3751BD87EA900C9EF73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		446DB3781BD87EA900C9EF73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		446DB37A1BD87EA900C9EF73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -74,6 +76,88 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		445166B91BD88343005782D0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				445166BA1BD88343005782D0 /* Model */,
+				445166BB1BD88343005782D0 /* Module */,
+				445166BC1BD88343005782D0 /* Tools */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		445166BA1BD88343005782D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		445166BB1BD88343005782D0 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				445166BD1BD88596005782D0 /* ManualScan */,
+				445166BE1BD88596005782D0 /* ProjectList */,
+				445166BF1BD88596005782D0 /* RondaList */,
+				445166C01BD88596005782D0 /* ScanCheckTicket */,
+				445166C11BD88596005782D0 /* TicketList */,
+				445166C21BD88596005782D0 /* UserLogin */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		445166BC1BD88343005782D0 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		445166BD1BD88596005782D0 /* ManualScan */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ManualScan;
+			sourceTree = "<group>";
+		};
+		445166BE1BD88596005782D0 /* ProjectList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProjectList;
+			sourceTree = "<group>";
+		};
+		445166BF1BD88596005782D0 /* RondaList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RondaList;
+			sourceTree = "<group>";
+		};
+		445166C01BD88596005782D0 /* ScanCheckTicket */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ScanCheckTicket;
+			sourceTree = "<group>";
+		};
+		445166C11BD88596005782D0 /* TicketList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TicketList;
+			sourceTree = "<group>";
+		};
+		445166C21BD88596005782D0 /* UserLogin */ = {
+			isa = PBXGroup;
+			children = (
+				445166C51BD885E5005782D0 /* DMUserLogin.storyboard */,
+				445166C91BD8B4AD005782D0 /* DMUserLoginViewController.swift */,
+				445166CB1BD8B8AD005782D0 /* LoginViewHeader.xib */,
+			);
+			path = UserLogin;
+			sourceTree = "<group>";
+		};
 		446DB3621BD87EA900C9EF73 = {
 			isa = PBXGroup;
 			children = (
@@ -97,9 +181,8 @@
 		446DB36D1BD87EA900C9EF73 /* DamaiPlayBusinessPhone */ = {
 			isa = PBXGroup;
 			children = (
+				445166B91BD88343005782D0 /* Classes */,
 				446DB36E1BD87EA900C9EF73 /* AppDelegate.swift */,
-				446DB3701BD87EA900C9EF73 /* ViewController.swift */,
-				446DB3721BD87EA900C9EF73 /* Main.storyboard */,
 				446DB3751BD87EA900C9EF73 /* Assets.xcassets */,
 				446DB3771BD87EA900C9EF73 /* LaunchScreen.storyboard */,
 				446DB37A1BD87EA900C9EF73 /* Info.plist */,
@@ -187,11 +270,13 @@
 		446DB3631BD87EA900C9EF73 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = DM;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = DamaiPlayBusinessPhone;
 				TargetAttributes = {
 					446DB36A1BD87EA900C9EF73 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = NXY5Z3L8SV;
 					};
 					446DB37E1BD87EA900C9EF73 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -229,8 +314,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				446DB3791BD87EA900C9EF73 /* LaunchScreen.storyboard in Resources */,
+				445166CC1BD8B8AD005782D0 /* LoginViewHeader.xib in Resources */,
+				445166C61BD885E5005782D0 /* DMUserLogin.storyboard in Resources */,
 				446DB3761BD87EA900C9EF73 /* Assets.xcassets in Resources */,
-				446DB3741BD87EA900C9EF73 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,7 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				446DB3711BD87EA900C9EF73 /* ViewController.swift in Sources */,
+				445166CA1BD8B4AD005782D0 /* DMUserLoginViewController.swift in Sources */,
 				446DB36F1BD87EA900C9EF73 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,14 +378,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		446DB3721BD87EA900C9EF73 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				446DB3731BD87EA900C9EF73 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		446DB3771BD87EA900C9EF73 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -396,10 +474,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DamaiPlayBusinessPhone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.damai.DamaiPlayBusinessPhone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -407,10 +489,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DamaiPlayBusinessPhone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.damai.DamaiPlayBusinessPhone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -481,6 +567,7 @@
 				446DB3951BD87EA900C9EF73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		446DB3961BD87EA900C9EF73 /* Build configuration list for PBXNativeTarget "DamaiPlayBusinessPhoneTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +576,7 @@
 				446DB3981BD87EA900C9EF73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		446DB3991BD87EA900C9EF73 /* Build configuration list for PBXNativeTarget "DamaiPlayBusinessPhoneUITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +585,7 @@
 				446DB39B1BD87EA900C9EF73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
