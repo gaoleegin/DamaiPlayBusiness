@@ -15,6 +15,7 @@
 		446DB3791BD87EA900C9EF73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446DB3771BD87EA900C9EF73 /* LaunchScreen.storyboard */; };
 		446DB3841BD87EA900C9EF73 /* DamaiPlayBusinessPhoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446DB3831BD87EA900C9EF73 /* DamaiPlayBusinessPhoneTests.swift */; };
 		446DB38F1BD87EA900C9EF73 /* DamaiPlayBusinessPhoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446DB38E1BD87EA900C9EF73 /* DamaiPlayBusinessPhoneUITests.swift */; };
+		9BE229EABE9E55F8AD524012 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF228373FA65D8E66CB97E1 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		081BDF49FDAA6736DA8ABB09 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		445166C51BD885E5005782D0 /* DMUserLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DMUserLogin.storyboard; sourceTree = "<group>"; };
 		445166C91BD8B4AD005782D0 /* DMUserLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMUserLoginViewController.swift; sourceTree = "<group>"; };
 		445166CB1BD8B8AD005782D0 /* LoginViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewHeader.xib; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		446DB38A1BD87EA900C9EF73 /* DamaiPlayBusinessPhoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DamaiPlayBusinessPhoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		446DB38E1BD87EA900C9EF73 /* DamaiPlayBusinessPhoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamaiPlayBusinessPhoneUITests.swift; sourceTree = "<group>"; };
 		446DB3901BD87EA900C9EF73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DF228373FA65D8E66CB97E1 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A25071133AC50CFCFF865510 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BE229EABE9E55F8AD524012 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43A6DC0A723381AFC537E659 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A25071133AC50CFCFF865510 /* Pods.debug.xcconfig */,
+				081BDF49FDAA6736DA8ABB09 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		445166B91BD88343005782D0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +179,8 @@
 				446DB3821BD87EA900C9EF73 /* DamaiPlayBusinessPhoneTests */,
 				446DB38D1BD87EA900C9EF73 /* DamaiPlayBusinessPhoneUITests */,
 				446DB36C1BD87EA900C9EF73 /* Products */,
+				43A6DC0A723381AFC537E659 /* Pods */,
+				FE45B9CCAADD07710380C70C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -208,6 +224,14 @@
 			path = DamaiPlayBusinessPhoneUITests;
 			sourceTree = "<group>";
 		};
+		FE45B9CCAADD07710380C70C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DF228373FA65D8E66CB97E1 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -215,9 +239,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 446DB3931BD87EA900C9EF73 /* Build configuration list for PBXNativeTarget "DamaiPlayBusinessPhone" */;
 			buildPhases = (
+				6FE813780739622F3A9634BE /* Check Pods Manifest.lock */,
 				446DB3671BD87EA900C9EF73 /* Sources */,
 				446DB3681BD87EA900C9EF73 /* Frameworks */,
 				446DB3691BD87EA900C9EF73 /* Resources */,
+				94193DC165271FA90BE6EA3D /* Embed Pods Frameworks */,
+				333EF00C05AD0037B167F00B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -335,6 +362,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		333EF00C05AD0037B167F00B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FE813780739622F3A9634BE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		94193DC165271FA90BE6EA3D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		446DB3671BD87EA900C9EF73 /* Sources */ = {
@@ -472,6 +547,7 @@
 		};
 		446DB3941BD87EA900C9EF73 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A25071133AC50CFCFF865510 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -487,6 +563,7 @@
 		};
 		446DB3951BD87EA900C9EF73 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 081BDF49FDAA6736DA8ABB09 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
