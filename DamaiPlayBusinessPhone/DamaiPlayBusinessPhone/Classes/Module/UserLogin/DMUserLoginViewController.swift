@@ -21,7 +21,6 @@ class DMUserLoginViewController: UITableViewController {
         //设置tableview的属性
         setTableViewPropertites()
         
-    
 }
     /// 设置tableview的属性
     func setTableViewPropertites(){
@@ -158,10 +157,70 @@ class DMUserLoginViewController: UITableViewController {
     func loginBtnClicked(){
         print("\(__FUNCTION__)")
         
+        
+        /*
+        [params setSafetyObject:_fieldUserName.text forKey:@"phone"];
+        [params setSafetyObject:_fieldPassWord.text forKey:@"passwd"];
+        [params setSafetyObject:[@1 stringValue] forKey:@"platform"];
+        [self showLoadingViewWithText:kLoadingText];
+
+        */
+        
         let userName:String = (self.firstTextField?.text)!
         let passWord:String = (self.secondTextField?.text)!
         
+        
+        let params:Dictionary<String,AnyObject> = ["phone":userName,"passwd":passWord,"platform":1]
+        
+        let urlString = DMAPIBaseURL + kUserLogin
+        
         SVProgressHUD.showWithStatus("正在加载")
+    Alamofire.request(.GET, urlString, parameters: params).responseJSON { (Response)in
+                Response.result.isSuccess
+                Response.result.error
+                Response.result.value
+                print("是否成功  \(Response.result.isSuccess)")
+                print("具体的数值\(Response.result.value)")
+                print("不明情况 \(Response.result.error)")
+                print("描述  \(Response.result.description)")
+        
+        
+        print(Response.debugDescription)
+        SVProgressHUD.dismiss()
+        if Response.result.error != nil {
+            print(Response.result.error)
+            SVProgressHUD.showInfoWithStatus("网络不给力", maskType: SVProgressHUDMaskType.Black)
+        } else {
+            
+            let MV:NSDictionary = Response.result.value as! NSDictionary
+            let MV1:NSDictionary = MV["data"] as! NSDictionary
+            
+
+            let mValueAndVvalue:DMMValueAndVValue = DMMValueAndVValue(dict: MV1 as! [String : AnyObject])
+            
+            print("====================\(mValueAndVvalue.MValue)")
+            print("====================\(mValueAndVvalue.VValue)")
+        }
+        
+//        Optional({
+//            error = "\U8d26\U6237\U6216\U5bc6\U7801\U9519\U8bef";
+//            errorCode = 1;
+//        })
+//        
+//        Optional({
+//            data =     {
+//                M = 8BACF7CA76D89F4B80F4CC43C867C281;
+//                V = 682B5858A1C5BAB9089DA6CEBC0D9361;
+//            };
+//            errorCode = 0;
+//        })
+        
+    }
+        
+        
+        
+        
+        
         
         print("用户名：\(userName)" + "密码：\(passWord)")
         

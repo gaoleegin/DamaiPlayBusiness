@@ -15,6 +15,8 @@
 		446DB3791BD87EA900C9EF73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446DB3771BD87EA900C9EF73 /* LaunchScreen.storyboard */; };
 		446DB3841BD87EA900C9EF73 /* DamaiPlayBusinessPhoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446DB3831BD87EA900C9EF73 /* DamaiPlayBusinessPhoneTests.swift */; };
 		446DB38F1BD87EA900C9EF73 /* DamaiPlayBusinessPhoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446DB38E1BD87EA900C9EF73 /* DamaiPlayBusinessPhoneUITests.swift */; };
+		44B4791B1BD9C03A00677299 /* GlobalUrlString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B4791A1BD9C03A00677299 /* GlobalUrlString.swift */; settings = {ASSET_TAGS = (); }; };
+		44B4791D1BD9D39900677299 /* DMMValueAndVValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B4791C1BD9D39900677299 /* DMMValueAndVValue.swift */; settings = {ASSET_TAGS = (); }; };
 		9BE229EABE9E55F8AD524012 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF228373FA65D8E66CB97E1 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		446DB38A1BD87EA900C9EF73 /* DamaiPlayBusinessPhoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DamaiPlayBusinessPhoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		446DB38E1BD87EA900C9EF73 /* DamaiPlayBusinessPhoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamaiPlayBusinessPhoneUITests.swift; sourceTree = "<group>"; };
 		446DB3901BD87EA900C9EF73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44B4791A1BD9C03A00677299 /* GlobalUrlString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalUrlString.swift; sourceTree = "<group>"; };
+		44B4791C1BD9D39900677299 /* DMMValueAndVValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMMValueAndVValue.swift; sourceTree = "<group>"; };
 		7DF228373FA65D8E66CB97E1 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25071133AC50CFCFF865510 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +127,7 @@
 		445166BC1BD88343005782D0 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				44B4791A1BD9C03A00677299 /* GlobalUrlString.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 				445166C51BD885E5005782D0 /* DMUserLogin.storyboard */,
 				445166C91BD8B4AD005782D0 /* DMUserLoginViewController.swift */,
 				445166CB1BD8B8AD005782D0 /* LoginViewHeader.xib */,
+				44B4791C1BD9D39900677299 /* DMMValueAndVValue.swift */,
 			);
 			path = UserLogin;
 			sourceTree = "<group>";
@@ -417,7 +423,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				445166CA1BD8B4AD005782D0 /* DMUserLoginViewController.swift in Sources */,
+				44B4791B1BD9C03A00677299 /* GlobalUrlString.swift in Sources */,
 				446DB36F1BD87EA900C9EF73 /* AppDelegate.swift in Sources */,
+				44B4791D1BD9D39900677299 /* DMMValueAndVValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
