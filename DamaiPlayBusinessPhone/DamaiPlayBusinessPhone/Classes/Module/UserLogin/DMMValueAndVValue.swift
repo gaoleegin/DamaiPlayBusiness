@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DMMValueAndVValue: NSObject {
+class DMMValueAndVValue: NSObject,NSCoding {
     let MValue:String
     let VValue:String
     
@@ -16,4 +16,17 @@ class DMMValueAndVValue: NSObject {
         MValue = dict["M"] as! String
         VValue = dict["V"] as! String
     }
+    
+   //归档
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(MValue, forKey: "M")
+        aCoder.encodeObject(VValue, forKey: "V")
+    }
+    
+    //解档
+    required init?(coder aDecoder: NSCoder) {
+      MValue = aDecoder.decodeObjectForKey("M") as! String
+      VValue = aDecoder.decodeObjectForKey("V") as! String
+    }
+    
 }

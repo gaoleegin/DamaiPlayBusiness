@@ -15,6 +15,7 @@
 		446DB3791BD87EA900C9EF73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446DB3771BD87EA900C9EF73 /* LaunchScreen.storyboard */; };
 		446DB3841BD87EA900C9EF73 /* DamaiPlayBusinessPhoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446DB3831BD87EA900C9EF73 /* DamaiPlayBusinessPhoneTests.swift */; };
 		446DB38F1BD87EA900C9EF73 /* DamaiPlayBusinessPhoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446DB38E1BD87EA900C9EF73 /* DamaiPlayBusinessPhoneUITests.swift */; };
+		4473FA1E1BDA1ACB005CE38F /* DMProjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4473FA1D1BDA1ACB005CE38F /* DMProjectListViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		44B4791B1BD9C03A00677299 /* GlobalUrlString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B4791A1BD9C03A00677299 /* GlobalUrlString.swift */; settings = {ASSET_TAGS = (); }; };
 		44B4791D1BD9D39900677299 /* DMMValueAndVValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B4791C1BD9D39900677299 /* DMMValueAndVValue.swift */; settings = {ASSET_TAGS = (); }; };
 		9BE229EABE9E55F8AD524012 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF228373FA65D8E66CB97E1 /* Pods.framework */; };
@@ -53,6 +54,7 @@
 		446DB38A1BD87EA900C9EF73 /* DamaiPlayBusinessPhoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DamaiPlayBusinessPhoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		446DB38E1BD87EA900C9EF73 /* DamaiPlayBusinessPhoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamaiPlayBusinessPhoneUITests.swift; sourceTree = "<group>"; };
 		446DB3901BD87EA900C9EF73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4473FA1D1BDA1ACB005CE38F /* DMProjectListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMProjectListViewController.swift; sourceTree = "<group>"; };
 		44B4791A1BD9C03A00677299 /* GlobalUrlString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalUrlString.swift; sourceTree = "<group>"; };
 		44B4791C1BD9D39900677299 /* DMMValueAndVValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMMValueAndVValue.swift; sourceTree = "<group>"; };
 		7DF228373FA65D8E66CB97E1 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +144,7 @@
 		445166BE1BD88596005782D0 /* ProjectList */ = {
 			isa = PBXGroup;
 			children = (
+				4473FA1D1BDA1ACB005CE38F /* DMProjectListViewController.swift */,
 			);
 			path = ProjectList;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 			files = (
 				445166CA1BD8B4AD005782D0 /* DMUserLoginViewController.swift in Sources */,
 				44B4791B1BD9C03A00677299 /* GlobalUrlString.swift in Sources */,
+				4473FA1E1BDA1ACB005CE38F /* DMProjectListViewController.swift in Sources */,
 				446DB36F1BD87EA900C9EF73 /* AppDelegate.swift in Sources */,
 				44B4791D1BD9D39900677299 /* DMMValueAndVValue.swift in Sources */,
 			);

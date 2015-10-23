@@ -154,75 +154,76 @@ class DMUserLoginViewController: UITableViewController {
     }
     
     /// 登录按钮的点击事件
+    
+     static  let path = (NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask , true).last!).stringByAppendingFormat("/MVValue.plist")
+    
     func loginBtnClicked(){
-        print("\(__FUNCTION__)")
-        
-        
-        /*
-        [params setSafetyObject:_fieldUserName.text forKey:@"phone"];
-        [params setSafetyObject:_fieldPassWord.text forKey:@"passwd"];
-        [params setSafetyObject:[@1 stringValue] forKey:@"platform"];
-        [self showLoadingViewWithText:kLoadingText];
-
-        */
         
         let userName:String = (self.firstTextField?.text)!
         let passWord:String = (self.secondTextField?.text)!
         
-        
-        let params:Dictionary<String,AnyObject> = ["phone":userName,"passwd":passWord,"platform":1]
-        
-        let urlString = DMAPIBaseURL + kUserLogin
-        
-        SVProgressHUD.showWithStatus("正在加载")
-    Alamofire.request(.GET, urlString, parameters: params).responseJSON { (Response)in
-                Response.result.isSuccess
-                Response.result.error
-                Response.result.value
-                print("是否成功  \(Response.result.isSuccess)")
-                print("具体的数值\(Response.result.value)")
-                print("不明情况 \(Response.result.error)")
-                print("描述  \(Response.result.description)")
-        
-        
-        print(Response.debugDescription)
-        SVProgressHUD.dismiss()
-        if Response.result.error != nil {
-            print(Response.result.error)
-            SVProgressHUD.showInfoWithStatus("网络不给力", maskType: SVProgressHUDMaskType.Black)
-        } else {
-            
-            let MV:NSDictionary = Response.result.value as! NSDictionary
-            let MV1:NSDictionary = MV["data"] as! NSDictionary
-            
-
-            let mValueAndVvalue:DMMValueAndVValue = DMMValueAndVValue(dict: MV1 as! [String : AnyObject])
-            
-            print("====================\(mValueAndVvalue.MValue)")
-            print("====================\(mValueAndVvalue.VValue)")
+        if userName.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) == 0 {
+            SVProgressHUD.showInfoWithStatus("用户名不能为空")
+            return
         }
         
-//        Optional({
-//            error = "\U8d26\U6237\U6216\U5bc6\U7801\U9519\U8bef";
-//            errorCode = 1;
-//        })
-//        
-//        Optional({
-//            data =     {
-//                M = 8BACF7CA76D89F4B80F4CC43C867C281;
-//                V = 682B5858A1C5BAB9089DA6CEBC0D9361;
-//            };
-//            errorCode = 0;
-//        })
+        if passWord.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) == 0 {
+            SVProgressHUD.showInfoWithStatus("密码不能为空")
+            return
+        }
+
+        let params:Dictionary<String,AnyObject> = ["phone":userName,"passwd":passWord,"platform":1]
         
-    }
+        /// url地址
+        let urlString = DMAPIBaseURL + kUserLogin
+
+        SVProgressHUD.showWithStatus("正在加载")
         
+        //获取M值
+        Alamofire.request(.GET, urlString, parameters: params).responseJSON { (Response)in
+        Response.result.isSuccess
+        Response.result.error
+        Response.result.value
+        print("是否成功  \(Response.result.isSuccess)")
+        print("具体的数值\(Response.result.value)")
+        print("不明情况 \(Response.result.error)")
+        print("描述  \(Response.result.description)")
+
+
+        print(Response.debugDescription)
         
-        
-        
-        
-        
-        print("用户名：\(userName)" + "密码：\(passWord)")
-        
+        print(Response.result.error)
+            
+            if Response.result.isSuccess == false {
+                
+              SVProgressHUD.showInfoWithStatus("网络不给力", maskType: SVProgressHUDMaskType.Black)
+                return
+            } else{
+                let MV:NSDictionary = Response.result.value as! NSDictionary
+                let errcode:Int = MV["errorCode"] as! Int
+                
+                if errcode == 1 {
+                    let MV1:String = MV["error"] as! String
+                    SVProgressHUD.showInfoWithStatus(MV1)
+                } else{
+                    let MV1:NSDictionary = MV["data"] as! NSDictionary
+                    let mValueAndVvalue:DMMValueAndVValue = DMMValueAndVValue(dict: MV1 as! [String : AnyObject])
+                      SVProgressHUD.dismiss()
+                    print("====================\(mValueAndVvalue.MValue)")
+                    print("====================\(mValueAndVvalue.VValue)")
+                    
+                    // 在 swift 中，如果类函数要访问某一个属性值，需要使用到 static
+                    // 归档路径 － Document，可以 iTunes 备份的，由应用程序产生的重要数据
+                    // 目前为止，在 swift 中，不允许定义 class 的"存储型"常量，需要使用 static
+                  
+                 print(DMUserLoginViewController.path)
+                 NSKeyedArchiver.archiveRootObject(mValueAndVvalue, toFile: DMUserLoginViewController.path)
+                    
+                }
+                
+            }
+       
+        }
+
     }
 }
