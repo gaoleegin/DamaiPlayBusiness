@@ -7,16 +7,45 @@
 //
 
 import UIKit
+import CocoaLumberjack
+
+class Log {
+    var intFor : Int
+    init() {
+        intFor = 42
+    }
+    class func DLog(message: String, function: String = __FUNCTION__) {
+        
+        DDLog.addLogger(DDTTYLogger.sharedInstance()) // TTY = Xcode console
+        DDLog.addLogger(DDASLLogger.sharedInstance()) // ASL = Apple System Logs
+        
+        let fileLogger: DDFileLogger = DDFileLogger() // File Logger
+        fileLogger.rollingFrequency = 60*60*24  // 24 hours
+        fileLogger.logFileManager.maximumNumberOfLogFiles = 7
+        DDLog.addLogger(fileLogger)
+        
+        //DDLogVerbose("Verbose");
+        DDLogDebug(message);
+//        DDLogInfo("Info");
+//        DDLogWarn("Warn");
+//        DDLogError("Error");    
+    }
+}
+
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        
+        
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        Log.DLog("Hello")
         
         let rootVC = DMUserLoginViewController()
         

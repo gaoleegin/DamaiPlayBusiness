@@ -188,7 +188,9 @@ class DMUserLoginViewController: UITableViewController {
         print("具体的数值\(Response.result.value)")
         print("不明情况 \(Response.result.error)")
         print("描述  \(Response.result.description)")
-
+            
+        Log.DLog("哈哈哈哈啊好")
+            
 
         print(Response.debugDescription)
         
@@ -218,6 +220,9 @@ class DMUserLoginViewController: UITableViewController {
                   
                  print(DMUserLoginViewController.path)
                  NSKeyedArchiver.archiveRootObject(mValueAndVvalue, toFile: DMUserLoginViewController.path)
+                 
+                 self.dismissViewControllerAnimated(true, completion: nil)
+                    
                     
                 }
                 

@@ -1,3 +1,4 @@
+pod 'CocoaLumberjack/Swift'
 pod 'SDWebImage'
 pod 'SVProgressHUD'
 use_frameworks!
