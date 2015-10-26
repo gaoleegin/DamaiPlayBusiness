@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class DMProjectListViewController: UITableViewController {
 
@@ -18,6 +19,27 @@ class DMProjectListViewController: UITableViewController {
         let mavalue:String =  DMMValueAndVValue.getDataMValue()
         
         print(mavalue)
+        
+        
+        //http://fb.jtwsm.cn/recount/GetRecountActivitys_show.do?m=8BACF7CA76D89F4B80F4CC43C867C281&pageIndex=1&pageSize=10&source=100001&version=10100
+        
+        let params:Dictionary<String,AnyObject> = ["m":DMMValueAndVValue.getDataMValue() ,"pageIndex":1,"pageSize":2,"source":100001,"version":10100]
+        
+       DMProjectListInfo.loadStatuses { (statuses) in
+            (statuses as! DMProjectListInfo).activityInfos
+        }
+        
+        
+        
+        Alamofire.request(.GET, "http://fb.jtwsm.cn/recount/GetRecountActivitys_show.do", parameters: params).responseJSON { (Response) -> Void in
+            
+            print(Response.response)
+            print(Response.result.isSuccess)
+            print(Response.result.debugDescription)
+            print(Response.result.value)
+            
+            
+        }
         
     }
 

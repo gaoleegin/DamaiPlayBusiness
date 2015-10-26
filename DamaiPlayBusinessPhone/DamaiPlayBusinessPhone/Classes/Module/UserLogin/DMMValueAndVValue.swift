@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class DMMValueAndVValue: NSObject,NSCoding {
     let MValue:String
     let VValue:String
