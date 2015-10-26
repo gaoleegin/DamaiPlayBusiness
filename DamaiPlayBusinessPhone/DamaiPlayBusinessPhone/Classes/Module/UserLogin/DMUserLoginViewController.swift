@@ -225,7 +225,7 @@ class DMUserLoginViewController: UITableViewController {
                  
                  self.dismissViewControllerAnimated(true, completion: nil)
                     
-                    let proVC = UIStoryboard(name: "ProjectList", bundle: nil).instantiateInitialViewController() as! DMProjectListViewController
+                    let proVC = UIStoryboard(name: "ProjectList", bundle: nil).instantiateInitialViewController() as! UINavigationController
                     UIApplication.sharedApplication().keyWindow?.rootViewController = proVC
                     
                 }
