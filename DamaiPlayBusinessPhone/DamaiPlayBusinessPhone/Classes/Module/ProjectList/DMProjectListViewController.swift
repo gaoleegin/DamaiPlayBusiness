@@ -26,7 +26,7 @@ class DMProjectListViewController: UITableViewController {
         let params:Dictionary<String,AnyObject> = ["m":DMMValueAndVValue.getDataMValue() ,"pageIndex":1,"pageSize":2,"source":100001,"version":10100]
         
        DMProjectListInfo.loadStatuses { (statuses) in
-            (statuses as! DMProjectListInfo).activityInfos
+            (statuses).activityInfos
         }
         
         

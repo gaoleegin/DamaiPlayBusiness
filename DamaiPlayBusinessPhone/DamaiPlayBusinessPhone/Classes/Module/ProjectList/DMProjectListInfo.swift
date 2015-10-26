@@ -30,7 +30,7 @@ class DMProjectListInfo: NSObject {
     }
     
     //加载数据
-    class func loadStatuses(completion:(statuses: [DMProjectListInfo]?)->()) {
+    class func loadStatuses(completion:(statuses:DMProjectListInfo)->()) {
         let params:Dictionary<String,AnyObject> = ["m":DMMValueAndVValue.getDataMValue() ,"pageIndex":1,"pageSize":2,"source":100001,"version":10100]
         
         Alamofire.request(.GET, urlString, parameters: params).responseJSON { (Response)in
@@ -44,6 +44,7 @@ class DMProjectListInfo: NSObject {
             let projectInfo1:DMProjectListInfo = DMProjectListInfo(dict: dict1 as! [String : AnyObject])
             
             
+            completion(statuses: projectInfo1)
             //complication(projectListInfo: projectInfo1)
         }
         
