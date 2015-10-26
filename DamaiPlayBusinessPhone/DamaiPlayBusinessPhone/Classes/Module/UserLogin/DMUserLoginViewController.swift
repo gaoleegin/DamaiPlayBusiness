@@ -220,9 +220,13 @@ class DMUserLoginViewController: UITableViewController {
                   
                  print(DMUserLoginViewController.path)
                  NSKeyedArchiver.archiveRootObject(mValueAndVvalue, toFile: DMUserLoginViewController.path)
+                    
+             
                  
                  self.dismissViewControllerAnimated(true, completion: nil)
                     
+                    let proVC = UIStoryboard(name: "ProjectList", bundle: nil).instantiateInitialViewController() as! DMProjectListViewController
+                    UIApplication.sharedApplication().keyWindow?.rootViewController = proVC
                     
                 }
                 

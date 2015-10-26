@@ -29,4 +29,11 @@ class DMMValueAndVValue: NSObject,NSCoding {
       VValue = aDecoder.decodeObjectForKey("V") as! String
     }
     
+    static func  getDataMValue()->(String){
+        
+        let MValue:DMMValueAndVValue =  NSKeyedUnarchiver.unarchiveObjectWithFile(DMUserLoginViewController.path) as!DMMValueAndVValue
+        
+        return MValue.MValue
+    }
+    
 }

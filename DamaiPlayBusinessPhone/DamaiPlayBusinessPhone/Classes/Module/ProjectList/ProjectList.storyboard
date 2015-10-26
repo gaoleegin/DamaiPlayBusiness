@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ms2-Ku-EGt">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Project List View Controller-->
+        <scene sceneID="NWA-8D-N0t">
+            <objects>
+                <tableViewController id="Ms2-Ku-EGt" customClass="DMProjectListViewController" customModule="DamaiPlayBusinessPhone" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="132" sectionHeaderHeight="28" sectionFooterHeight="28" id="uP2-TE-qqb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProjectListCells" rowHeight="135" id="GEp-OH-CDk">
+                                <rect key="frame" x="0.0" y="28" width="600" height="135"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GEp-OH-CDk" id="IuH-uY-9nB">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="134.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbf-Tq-VLh">
+                                            <rect key="frame" x="0.0" y="124" width="600" height="10"/>
+                                            <color key="backgroundColor" red="1" green="0.030914369949999999" blue="0.028244332680000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="10" id="NL2-zo-Gaa"/>
+                                            </constraints>
+                                        </view>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_bg" translatesAutoresizingMaskIntoConstraints="NO" id="9RS-8L-Qg2">
+                                            <rect key="frame" x="15" y="8" width="64" height="93"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="64" id="i6z-EY-cS8"/>
+                                                <constraint firstAttribute="height" constant="93" id="umS-fj-CWO"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8wx-Xm-YL6">
+                                            <rect key="frame" x="558" y="30" width="34" height="43"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="wbf-Tq-VLh" secondAttribute="trailing" constant="-8" id="6oK-dP-yAr"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="wbf-Tq-VLh" secondAttribute="bottom" constant="-7.5" id="AIX-tT-B2E"/>
+                                        <constraint firstItem="wbf-Tq-VLh" firstAttribute="leading" secondItem="IuH-uY-9nB" secondAttribute="leadingMargin" constant="-8" id="B1f-3N-MlI"/>
+                                        <constraint firstItem="9RS-8L-Qg2" firstAttribute="top" secondItem="IuH-uY-9nB" secondAttribute="topMargin" id="dGo-R8-Jik"/>
+                                        <constraint firstItem="9RS-8L-Qg2" firstAttribute="leading" secondItem="IuH-uY-9nB" secondAttribute="leadingMargin" constant="7" id="xxe-8X-r9e"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ms2-Ku-EGt" id="uRK-pa-czV"/>
+                            <outlet property="delegate" destination="Ms2-Ku-EGt" id="e1d-i5-dw1"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="czP-cm-0R1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="395" y="359"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="login_bg" width="375" height="250"/>
+    </resources>
+</document>
