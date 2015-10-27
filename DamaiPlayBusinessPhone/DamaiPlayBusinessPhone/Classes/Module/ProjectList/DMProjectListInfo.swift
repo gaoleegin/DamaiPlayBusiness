@@ -33,7 +33,7 @@ class DMProjectListInfo: NSObject {
     class func loadStatuses(completion:(statuses:DMProjectListInfo)->()) {
         let params:Dictionary<String,AnyObject> = ["m":DMMValueAndVValue.getDataMValue() ,"pageIndex":1,"pageSize":2,"source":100001,"version":10100]
         
-        Alamofire.request(.GET, urlString, parameters: params).responseJSON { (Response)in
+        Alamofire.request(.GET, urlString, parameters: params).responseJSON { (Response) in
             
             print(Response.result.isSuccess)
             print(Response.response)
@@ -41,10 +41,10 @@ class DMProjectListInfo: NSObject {
             
             let dict1:NSDictionary = ["":""]
             
-            let projectInfo1:DMProjectListInfo = DMProjectListInfo(dict: dict1 as! [String : AnyObject])
+            //let projectInfo1:DMProjectListInfo = DMProjectListInfo(dict: dict1 as! [String : AnyObject])
             
-            
-            completion(statuses: projectInfo1)
+            //就是的在短短的几天之内，真的就是在短短的几天zhine
+            //completion(statuses: projectInfo1)
             //complication(projectListInfo: projectInfo1)
         }
         

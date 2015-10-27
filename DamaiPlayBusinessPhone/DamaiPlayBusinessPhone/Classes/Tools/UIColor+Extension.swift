@@ -6,4 +6,16 @@
 //  Copyright © 2015年 DamaiPlayBusinessPhone. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension UIColor{
+    
+
+    
+}
+
+
+
+
+
+
