@@ -29,7 +29,7 @@ class DMProjectListViewController: UITableViewController {
         DMNetWork.requestJSON(.GET, "http://fb.jtwsm.cn/recount/GetRecountActivitys_show.do", parameters: params) { (JSON) -> () in
             print(JSON)
             
-            
+        
         }
 //       DMProjectListInfo.loadStatuses { (statuses) in
 //            (statuses).activityInfos
