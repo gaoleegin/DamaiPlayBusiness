@@ -23,14 +23,14 @@ class DMProjectListViewController: UITableViewController {
         
         //http://fb.jtwsm.cn/recount/GetRecountActivitys_show.do?m=8BACF7CA76D89F4B80F4CC43C867C281&pageIndex=1&pageSize=10&source=100001&version=10100
         
-        let params:Dictionary<String,AnyObject> = ["m":DMMValueAndVValue.getDataMValue() ,"pageIndex":1,"pageSize":2,"source":100001,"version":10100]
+        //let params:Dictionary<String,AnyObject> = ["m":DMMValueAndVValue.getDataMValue() ,"pageIndex":1,"pageSize":2,"source":100001,"version":10100]
         
         
-        DMNetWork.requestJSON(.GET, "http://fb.jtwsm.cn/recount/GetRecountActivitys_show.do", parameters: params) { (JSON) -> () in
-            print(JSON)
-            
-        
-        }
+//        DMNetWork.requestJSON(.GET, "http://fb.jtwsm.cn/recount/GetRecountActivitys_show.do", parameters: params) { (JSON) -> () in
+//            print(JSON)
+//            
+//        
+//        }
 //       DMProjectListInfo.loadStatuses { (statuses) in
 //            (statuses).activityInfos
 //        }
