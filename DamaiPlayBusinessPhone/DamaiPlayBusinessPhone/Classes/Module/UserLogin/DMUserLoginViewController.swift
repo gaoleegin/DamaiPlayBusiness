@@ -25,7 +25,7 @@ class DMUserLoginViewController: UITableViewController {
     /// 设置tableview的属性
     func setTableViewPropertites(){
         
-        tableView.backgroundColor = UIColor.colorWithHex("444444")
+        tableView.backgroundColor = UIColor(red: 239/255.0, green: 239/255.0, blue: 239/255.0, alpha: 1.0)
         //创建头部的控件
         let headewView = NSBundle.mainBundle().loadNibNamed("LoginViewHeader", owner: nil, options: nil).first as! UIView
         headewView.frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width, 250)
