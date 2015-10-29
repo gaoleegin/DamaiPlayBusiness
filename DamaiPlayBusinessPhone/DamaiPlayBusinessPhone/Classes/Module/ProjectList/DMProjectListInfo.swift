@@ -28,27 +28,6 @@ class DMProjectListInfo: NSObject {
         startingActCount = dict["startingActCount"] as! Int
         total = dict["total"] as! Int
     }
-    
-    //加载数据
-    class func loadStatuses(completion:(statuses:DMProjectListInfo)->()) {
-        let params:Dictionary<String,AnyObject> = ["m":DMMValueAndVValue.getDataMValue() ,"pageIndex":1,"pageSize":2,"source":100001,"version":10100]
-        
-        Alamofire.request(.GET, urlString, parameters: params).responseJSON { (Response) in
-            
-            print(Response.result.isSuccess)
-            print(Response.response)
-            print(Response.request)
-            
-            let dict1:NSDictionary = ["":""]
-            
-            //let projectInfo1:DMProjectListInfo = DMProjectListInfo(dict: dict1 as! [String : AnyObject])
-            
-            //就是的在短短的几天之内，真的就是在短短的几天zhine
-            //completion(statuses: projectInfo1)
-            //complication(projectListInfo: projectInfo1)
-        }
-        
-    }
 }
 
 

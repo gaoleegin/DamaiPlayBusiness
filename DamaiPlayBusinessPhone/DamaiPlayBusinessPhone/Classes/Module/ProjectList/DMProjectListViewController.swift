@@ -8,44 +8,58 @@
 
 import UIKit
 import Alamofire
+import SVProgressHUD
 
 class DMProjectListViewController: UITableViewController {
+    
+    private var projectListInfo:DMProjectListInfo?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.title = "首页"
         
-        let mavalue:String =  DMMValueAndVValue.getDataMValue()
+        loadData()
+ 
+    }
+    
+    /// 加载数据
+    private func loadData(){
         
-        print(mavalue)
+        let urlString:String = "http://fb.jtwsm.cn/recount/GetRecountActivitys_show.do"
         
+        let params:Dictionary<String,AnyObject> = ["m":DMMValueAndVValue.getDataMValue() ,"pageIndex":1,"pageSize":2,"source":100001,"version":10100]
         
-        //http://fb.jtwsm.cn/recount/GetRecountActivitys_show.do?m=8BACF7CA76D89F4B80F4CC43C867C281&pageIndex=1&pageSize=10&source=100001&version=10100
-        
-        //let params:Dictionary<String,AnyObject> = ["m":DMMValueAndVValue.getDataMValue() ,"pageIndex":1,"pageSize":2,"source":100001,"version":10100]
-        
-        
-//        DMNetWork.requestJSON(.GET, "http://fb.jtwsm.cn/recount/GetRecountActivitys_show.do", parameters: params) { (JSON) -> () in
-//            print(JSON)
-//            
-//        
-//        }
-//       DMProjectListInfo.loadStatuses { (statuses) in
-//            (statuses).activityInfos
-//        }
-//        
-//        
-//        
-//        Alamofire.request(.GET, "http://fb.jtwsm.cn/recount/GetRecountActivitys_show.do", parameters: params).responseJSON { (Response) -> Void in
-//            
-//            print(Response.response)
-//            print(Response.result.isSuccess)
-//            print(Response.result.debugDescription)
-//            print(Response.result.value)
-//            
-//            
-//        }
+        DMNetWork.requestJSON(.GET, urlString, parameters: params) { (JSON) in
+            let jsonResult:[String:AnyObject] = JSON as! [String : AnyObject]
+            let erroCode:Int = jsonResult["errorCode"] as! Int
+            
+            print("这是一个错误信息\(erroCode)")
+            
+            if erroCode != 0 {
+                SVProgressHUD.showErrorWithStatus("数据返回错误")
+            } else{
+                let recountActivitysList:[String:AnyObject] = jsonResult["obj"]!["recountActivitysList"] as! [String : AnyObject]
+                let projectListInfo:DMProjectListInfo = DMProjectListInfo(dict: recountActivitysList)
+                
+                let array = projectListInfo.activityInfos
+                var mutaArray:[DMactivityInfoDto]? = Array()
+                
+                for activityInfoDto in array! {
+                    let InfoDto:DMactivityInfoDto =  DMactivityInfoDto(dict: activityInfoDto as! [String : AnyObject])
+                    mutaArray?.append(InfoDto)
+                }
+                
+                projectListInfo.activityInfos = mutaArray!
+                
+                self.projectListInfo = projectListInfo
+                
+                print("模型的所有东西\(projectListInfo)")
+                self.tableView.reloadData()
+            }
+            
+            
+        }
         
     }
 
@@ -63,15 +77,16 @@ class DMProjectListViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        
+        return 1
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ProjectListCells", forIndexPath: indexPath)
-
-       
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("ProjectListCells", forIndexPath: indexPath) as! DMProjectListCell
+    let InfoDto:DMactivityInfoDto = (self.projectListInfo?.activityInfos?[indexPath.row]) as! DMactivityInfoDto
+        cell.projectListInfo = InfoDto
+        
         return cell
     }
 

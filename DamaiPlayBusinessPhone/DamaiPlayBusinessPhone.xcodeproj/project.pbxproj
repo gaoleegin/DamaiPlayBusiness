@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		440FE83B1BE203A500D87BD3 /* DMProjectListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440FE83A1BE203A500D87BD3 /* DMProjectListCell.swift */; settings = {ASSET_TAGS = (); }; };
 		445166C61BD885E5005782D0 /* DMUserLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 445166C51BD885E5005782D0 /* DMUserLogin.storyboard */; settings = {ASSET_TAGS = (); }; };
 		445166CA1BD8B4AD005782D0 /* DMUserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445166C91BD8B4AD005782D0 /* DMUserLoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		445166CC1BD8B8AD005782D0 /* LoginViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 445166CB1BD8B8AD005782D0 /* LoginViewHeader.xib */; settings = {ASSET_TAGS = (); }; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		081BDF49FDAA6736DA8ABB09 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		440FE83A1BE203A500D87BD3 /* DMProjectListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMProjectListCell.swift; sourceTree = "<group>"; };
 		445166C51BD885E5005782D0 /* DMUserLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DMUserLogin.storyboard; sourceTree = "<group>"; };
 		445166C91BD8B4AD005782D0 /* DMUserLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMUserLoginViewController.swift; sourceTree = "<group>"; };
 		445166CB1BD8B8AD005782D0 /* LoginViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewHeader.xib; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				4473FA1D1BDA1ACB005CE38F /* DMProjectListViewController.swift */,
 				4470859E1BDDB45200D257EA /* ProjectList.storyboard */,
 				4480338C1BDE16BF00460835 /* DMProjectListInfo.swift */,
+				440FE83A1BE203A500D87BD3 /* DMProjectListCell.swift */,
 			);
 			path = ProjectList;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				449DAA201BDF165200C212BD /* UIColor+Extension.swift in Sources */,
 				4480338D1BDE16BF00460835 /* DMProjectListInfo.swift in Sources */,
 				445166CA1BD8B4AD005782D0 /* DMUserLoginViewController.swift in Sources */,
+				440FE83B1BE203A500D87BD3 /* DMProjectListCell.swift in Sources */,
 				44B4791B1BD9C03A00677299 /* GlobalUrlString.swift in Sources */,
 				4473FA1E1BDA1ACB005CE38F /* DMProjectListViewController.swift in Sources */,
 				44871E191BE05D830068718C /* DMNetWork.swift in Sources */,

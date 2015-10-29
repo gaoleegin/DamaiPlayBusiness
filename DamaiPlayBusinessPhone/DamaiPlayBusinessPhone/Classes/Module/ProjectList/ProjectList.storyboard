@@ -10,47 +10,72 @@
         <scene sceneID="xcF-Tf-JnY">
             <objects>
                 <tableViewController id="G2C-Nl-8TH" customClass="DMProjectListViewController" customModule="DamaiPlayBusinessPhone" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="183" sectionHeaderHeight="28" sectionFooterHeight="28" id="ziO-hs-efb">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="125" sectionHeaderHeight="28" sectionFooterHeight="28" id="ziO-hs-efb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProjectListCells" rowHeight="133" id="7VF-tr-Qjg">
-                                <rect key="frame" x="0.0" y="92" width="600" height="133"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProjectListCells" rowHeight="125" id="7VF-tr-Qjg" customClass="DMProjectListCell" customModule="DamaiPlayBusinessPhone" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="125"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7VF-tr-Qjg" id="4vc-VS-5Z4">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="132.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="125"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Ybo-u1-aqo">
-                                            <rect key="frame" x="18" y="18" width="69" height="93"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Ybo-u1-aqo" userLabel="项目图片">
+                                            <rect key="frame" x="8" y="8" width="69" height="93"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="93" id="9gw-36-yL2"/>
                                                 <constraint firstAttribute="width" constant="69" id="w8f-EM-zh0"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHZ-ko-l5i">
-                                            <rect key="frame" x="95" y="18" width="39.5" height="19.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHZ-ko-l5i" userLabel="项目名字">
+                                            <rect key="frame" x="85" y="8" width="39.5" height="19.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2de-E3-nXO">
-                                            <rect key="frame" x="95" y="39" width="35.5" height="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2de-E3-nXO" userLabel="项目时间">
+                                            <rect key="frame" x="85" y="29" width="35.5" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.52156862745098043" green="0.52156862745098043" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Waj-2T-RWl" userLabel="项目状态">
+                                            <rect key="frame" x="85" y="87" width="28.5" height="13.5"/>
+                                            <color key="backgroundColor" red="0.96078431372549022" green="0.72156862745098038" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xgz-Ve-PX4">
+                                            <rect key="frame" x="0.0" y="114.5" width="600" height="10"/>
+                                            <color key="backgroundColor" red="1" green="0.36162586219999998" blue="0.19662071319999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="10" id="o8D-QS-Ohd"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Ybo-u1-aqo" firstAttribute="top" secondItem="4vc-VS-5Z4" secondAttribute="topMargin" constant="10" id="8of-ZZ-3Ci"/>
+                                        <constraint firstItem="Ybo-u1-aqo" firstAttribute="top" secondItem="4vc-VS-5Z4" secondAttribute="topMargin" id="8of-ZZ-3Ci"/>
+                                        <constraint firstItem="Xgz-Ve-PX4" firstAttribute="leading" secondItem="4vc-VS-5Z4" secondAttribute="leadingMargin" constant="-8" id="a64-TF-nlH"/>
+                                        <constraint firstItem="Waj-2T-RWl" firstAttribute="bottom" secondItem="Ybo-u1-aqo" secondAttribute="bottom" id="ftB-HN-0Un"/>
                                         <constraint firstItem="vHZ-ko-l5i" firstAttribute="top" secondItem="Ybo-u1-aqo" secondAttribute="top" id="i5k-0F-pxR"/>
-                                        <constraint firstItem="Ybo-u1-aqo" firstAttribute="leading" secondItem="4vc-VS-5Z4" secondAttribute="leadingMargin" constant="10" id="ivF-ik-9SW"/>
+                                        <constraint firstItem="Ybo-u1-aqo" firstAttribute="leading" secondItem="4vc-VS-5Z4" secondAttribute="leadingMargin" id="ivF-ik-9SW"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Xgz-Ve-PX4" secondAttribute="trailing" constant="-8" id="jCV-gP-eEX"/>
                                         <constraint firstItem="2de-E3-nXO" firstAttribute="leading" secondItem="vHZ-ko-l5i" secondAttribute="leading" id="js5-bO-4JD"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Xgz-Ve-PX4" secondAttribute="bottom" constant="-8" id="sVQ-V8-pUK"/>
+                                        <constraint firstItem="Waj-2T-RWl" firstAttribute="leading" secondItem="Ybo-u1-aqo" secondAttribute="trailing" constant="8" id="tea-CJ-5W5"/>
                                         <constraint firstItem="vHZ-ko-l5i" firstAttribute="leading" secondItem="Ybo-u1-aqo" secondAttribute="trailing" constant="8" id="uZW-BJ-Hix"/>
                                         <constraint firstItem="2de-E3-nXO" firstAttribute="top" secondItem="vHZ-ko-l5i" secondAttribute="bottom" constant="2" id="vCc-OH-BTq"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="projectIcon" destination="Ybo-u1-aqo" id="72Z-rW-AUm"/>
+                                    <outlet property="projectName" destination="vHZ-ko-l5i" id="msV-Gf-upp"/>
+                                    <outlet property="projectStatus" destination="Waj-2T-RWl" id="I37-p2-CF4"/>
+                                    <outlet property="projectTime" destination="2de-E3-nXO" id="w1g-jP-YdI"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
