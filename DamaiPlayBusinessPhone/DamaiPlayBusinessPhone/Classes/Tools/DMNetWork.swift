@@ -24,6 +24,7 @@ class DMNetWork: NSObject {
                 completion(JSON: Response.result.value)
                 }
             print(Response.debugDescription)
+          
             }
     }
 }

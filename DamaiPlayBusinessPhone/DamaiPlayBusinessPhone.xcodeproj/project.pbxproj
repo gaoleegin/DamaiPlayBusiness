@@ -17,7 +17,6 @@
 		446DB3841BD87EA900C9EF73 /* DamaiPlayBusinessPhoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446DB3831BD87EA900C9EF73 /* DamaiPlayBusinessPhoneTests.swift */; };
 		446DB38F1BD87EA900C9EF73 /* DamaiPlayBusinessPhoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446DB38E1BD87EA900C9EF73 /* DamaiPlayBusinessPhoneUITests.swift */; };
 		4470859F1BDDB45200D257EA /* ProjectList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4470859E1BDDB45200D257EA /* ProjectList.storyboard */; settings = {ASSET_TAGS = (); }; };
-		4473FA1E1BDA1ACB005CE38F /* DMProjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4473FA1D1BDA1ACB005CE38F /* DMProjectListViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		4480338D1BDE16BF00460835 /* DMProjectListInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480338C1BDE16BF00460835 /* DMProjectListInfo.swift */; settings = {ASSET_TAGS = (); }; };
 		44871E191BE05D830068718C /* DMNetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44871E181BE05D830068718C /* DMNetWork.swift */; settings = {ASSET_TAGS = (); }; };
 		449DAA201BDF165200C212BD /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DAA1F1BDF165200C212BD /* UIColor+Extension.swift */; settings = {ASSET_TAGS = (); }; };
@@ -61,7 +60,6 @@
 		446DB38E1BD87EA900C9EF73 /* DamaiPlayBusinessPhoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamaiPlayBusinessPhoneUITests.swift; sourceTree = "<group>"; };
 		446DB3901BD87EA900C9EF73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4470859E1BDDB45200D257EA /* ProjectList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProjectList.storyboard; sourceTree = "<group>"; };
-		4473FA1D1BDA1ACB005CE38F /* DMProjectListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMProjectListViewController.swift; sourceTree = "<group>"; };
 		4480338C1BDE16BF00460835 /* DMProjectListInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMProjectListInfo.swift; sourceTree = "<group>"; };
 		44871E181BE05D830068718C /* DMNetWork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMNetWork.swift; sourceTree = "<group>"; };
 		449DAA1F1BDF165200C212BD /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 		445166BE1BD88596005782D0 /* ProjectList */ = {
 			isa = PBXGroup;
 			children = (
-				4473FA1D1BDA1ACB005CE38F /* DMProjectListViewController.swift */,
 				4470859E1BDDB45200D257EA /* ProjectList.storyboard */,
 				4480338C1BDE16BF00460835 /* DMProjectListInfo.swift */,
 				440FE83A1BE203A500D87BD3 /* DMProjectListCell.swift */,
@@ -446,7 +443,6 @@
 				445166CA1BD8B4AD005782D0 /* DMUserLoginViewController.swift in Sources */,
 				440FE83B1BE203A500D87BD3 /* DMProjectListCell.swift in Sources */,
 				44B4791B1BD9C03A00677299 /* GlobalUrlString.swift in Sources */,
-				4473FA1E1BDA1ACB005CE38F /* DMProjectListViewController.swift in Sources */,
 				44871E191BE05D830068718C /* DMNetWork.swift in Sources */,
 				446DB36F1BD87EA900C9EF73 /* AppDelegate.swift in Sources */,
 				44B4791D1BD9D39900677299 /* DMMValueAndVValue.swift in Sources */,
